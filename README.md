@@ -58,10 +58,11 @@ RStudio installed with the specified versions below:
 - R version 3.2.4 (2016-03-16) or later
 
 R packages include:
-- base
-- data.table
-- dpylr
-- knit
+
+- base, 3.2.4
+- data.table, 1.9.6  
+- dpylr, 0.4.3
+- knit, 1.12.3
 
 ##### Operating System (OS)
 This project was designed and tested on the following specific environment:

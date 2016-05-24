@@ -98,12 +98,10 @@ list.dts.test <- lapply(list.dts.test, function(x) {
 
 ### 1f
 dt.train.merge <- merge(list.dts.train$x.train, list.dts.train$y.train, by="id")
-
 dt.train.merge2 <- merge(dt.train.merge, list.dts.train$subjects.train, by="id")
 
 ### 1g
 dt.test.merge <- merge(list.dts.test$x.test, list.dts.test$y.test, by="id")
-
 dt.test.merge2 <- merge(dt.test.merge, list.dts.test$subjects.test, by="id")
 
 ### 1h
