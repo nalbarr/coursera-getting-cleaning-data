@@ -11,13 +11,13 @@ Analysis and processing this human activity tracking data set requires applicati
 
 > Tidy datasets are easy to manipulate, model and visualize... have a specific structure: each variable is a column, each observation is a row, and each type of observational unit is a table).
 
-I attempt to apply these principles with R programming but also in applying proper semantic by documenting my approach via a code book that accompanies a data analysis script.
+Not only does this project applies these principles with R programming but also in demonstrating proper best practices by documenting a code book that accompanies a data analysis script and describes both input and output codes and data sets.
 
-Additionally, where possible I apply as much of Wickhams's convenience packags such as data.table, dplyr and attempt to use a more *functional style* coding by using R collections and declarative lapply, etc. processing where possible.
+Lastly, where possible this project applies as much of Wickhams's convenience packags such as data.table, dplyr and attempt to use a more *functional style* coding by using R collections and declarative lapply, etc. processing where possible.
 
 ### Objectives
 
-This project demonstrated data analysis by an R script called run_analysis.R that does the following.
+This project demonstrates skills for data analysis using R programming for tasks of:
 
 - Merges the training and the test sets to create one data set.
 - Extracts only the measurements on the mean and standard deviation for each measurement.
@@ -41,7 +41,7 @@ Final data set | Tidy data set| tidy_output.txt
 #### Inputs
 Input UCI Human Activity Recognition (HAR) data set has been downloaded to your current working directory expanded to a local folder named:  "UCI HAR Dataset".  For convenience, this has been included in the repository
 
-For convenience the input data files have been included pre downloaded as original .zip file and already expanded in Git repository.
+For convenience input data files have been included pre downloaded as original .zip file and already expanded in Git repository.
 
 #### Outputs
 - README.html
@@ -52,6 +52,7 @@ For convenience the input data files have been included pre downloaded as origin
 
 ##### Environment
 This project assumes the following design and run time execution environment.  
+
 RStudio installed with the specified versions below:
 
 - R Studio, version 0.99.893 or later

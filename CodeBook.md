@@ -49,7 +49,7 @@ Other measurements can be fully described within UCI HAR directory in README.txt
 
 ##### Final output codes
 
-The final tiday data set codes and data are:
+The final tidy data set codes are below:
 
  [1] "by.subject"                                  
  [2] "by.activity"                                 
@@ -71,6 +71,8 @@ The final tiday data set codes and data are:
 [18] "Mean-(freqBodyGyroMagnitudeStdDeviation)"    
 [19] "Mean-(freqBodyGyroJerkMagnitudeMean)"        
 [20] "Mean-(freqBodyGyroJerkMagnitudeStdDeviation)"
+
+The first 2 columns: by.subject.id and by.activity.id are grouping columns for subject and activity respectively.  The remaining columns are mean calculation by apply mean function across features that only represent mean and standard deviation at a per feature observation/measurement.
 
 #### Technical Overview, Data Analysis and Processing
 
@@ -185,116 +187,71 @@ V1           V2          V3         V4          V5          V6         V7       
 ```
 # Tidy data set output as data table.
 # Note that by.subject and by.activity are grouping columns used by aggregate function to compute means.
-> dt4
+> dt5
 ```
 
 ```
-       activity.id timeBodyAccMagnitudeMean timeBodyAccMagnitudeStdDeviation
-    1:           1              -0.22455962                       -0.2379807
-    2:           1              -0.12650269                       -0.2133903
-    3:           1              -0.16010001                       -0.2575711
-    4:           1              -0.07351308                       -0.1951145
-    5:           1              -0.04949205                       -0.2110254
-   ---                                                                      
-10295:           6              -0.98884319                       -0.9917777
-10296:           6              -0.98174811                       -0.9873845
-10297:           6              -0.98244389                       -0.9854095
-10298:           6              -0.98609335                       -0.9902433
-10299:           6              -0.98342545                       -0.9923642
-       timeGravityAccMagnitudeMean timeGravityAccMagnitudeStdDeviation
-    1:                 -0.22455962                          -0.2379807
-    2:                 -0.12650269                          -0.2133903
-    3:                 -0.16010001                          -0.2575711
-    4:                 -0.07351308                          -0.1951145
-    5:                 -0.04949205                          -0.2110254
-   ---                                                                
-10295:                 -0.98884319                          -0.9917777
-10296:                 -0.98174811                          -0.9873845
-10297:                 -0.98244389                          -0.9854095
-10298:                 -0.98609335                          -0.9902433
-10299:                 -0.98342545                          -0.9923642
-       timeBodyAccJerkMagnitudeMean timeBodyAccJerkMagnitudeStdDeviation
-    1:                   -0.2894243                           -0.1650001
-    2:                   -0.1385012                           -0.1985903
-    3:                   -0.1943548                           -0.2199436
-    4:                   -0.1294801                           -0.1739346
-    5:                   -0.1598686                           -0.1498507
-   ---                                                                  
-10295:                   -0.9902476                           -0.9920228
-10296:                   -0.9867954                           -0.9905751
-10297:                   -0.9880591                           -0.9916558
-10298:                   -0.9910350                           -0.9934461
-10299:                   -0.9886198                           -0.9909061
-       timeBodyGyroMagnitudeMean timeBodyGyroMagnitudeStdDeviation timeBodyGyroJerkMagnitudeMean
-    1:               -0.03439560                       -0.16818626                    -0.4661497
-    2:               -0.14093823                       -0.21605518                    -0.3899198
-    3:               -0.09459356                       -0.29084739                    -0.3741507
-    4:               -0.04934062                       -0.09012390                    -0.2364741
-    5:               -0.02141046                       -0.04463632                    -0.2200966
-   ---                                                                                          
-10295:               -0.98847990                       -0.98537004                    -0.9893181
-10296:               -0.98444333                       -0.98240760                    -0.9848154
-10297:               -0.98266539                       -0.98312491                    -0.9840703
-10298:               -0.98276016                       -0.98127808                    -0.9873932
-10299:               -0.97959682                       -0.97870913                    -0.9882131
-       timeBodyGyroJerkMagnitudeStdDeviation freqBodyAccMagnitudeMean
-    1:                            -0.4336540              -0.16681083
-    2:                            -0.4389841              -0.07927762
-    3:                            -0.4180319              -0.15631258
-    4:                            -0.2294418              -0.10437689
-    5:                            -0.2127722              -0.12319532
-   ---                                                               
-10295:                            -0.9884941              -0.99175364
-10296:                            -0.9868671              -0.98726145
-10297:                            -0.9889891              -0.98658361
-10298:                            -0.9912512              -0.99075249
-10299:                            -0.9885650              -0.99268415
-       freqBodyAccMagnitudeStdDeviation freqBodyAccJerkMagnitudeMean
-    1:                       -0.3995829                   -0.1540448
-    2:                       -0.4230300                   -0.1784456
-    3:                       -0.4368583                   -0.1494380
-    4:                       -0.3762153                   -0.1322222
-    5:                       -0.3878596                   -0.1160875
-   ---                                                              
-10295:                       -0.9920716                   -0.9909836
-10296:                       -0.9883995                   -0.9891111
-10297:                       -0.9858340                   -0.9905583
-10298:                       -0.9903920                   -0.9936677
-10299:                       -0.9923438                   -0.9904162
-       freqBodyAccJerkMagnitudeStdDeviation freqBodyGyroMagnitudeMean
-    1:                           -0.1846900              -0.222176040
-    2:                           -0.2306563              -0.268279820
-    3:                           -0.3212563              -0.308670720
-    4:                           -0.2326118              -0.060131490
-    5:                           -0.2010365              -0.003821466
-   ---                                                               
-10295:                           -0.9923899              -0.985383580
-10296:                           -0.9914063              -0.981451300
-10297:                           -0.9921421              -0.982940420
-10298:                           -0.9915172              -0.983046410
-10299:                           -0.9902372              -0.979559350
-       freqBodyGyroMagnitudeStdDeviation freqBodyGyroJerkMagnitudeMean
-    1:                        -0.2736495                    -0.4318317
-    2:                        -0.3146234                    -0.4281859
-    3:                        -0.4014002                    -0.4010383
-    4:                        -0.2746461                    -0.2176688
-    5:                        -0.2462486                    -0.1875509
-   ---                                                                
-10295:                        -0.9877505                    -0.9889995
-10296:                        -0.9861809                    -0.9861487
-10297:                        -0.9860755                    -0.9874496
-10298:                        -0.9830186                    -0.9908205
-10299:                        -0.9815917                    -0.9875887
-       freqBodyGyroJerkMagnitudeStdDeviation subject.id activity.name
-    1:                            -0.4763701          1       WALKING
-    2:                            -0.4928844          1       WALKING
-    3:                            -0.4819242          1       WALKING
-    4:                            -0.2992263          1       WALKING
-    5:                            -0.3003380          1       WALKING
-   ---                                                               
-10295:                            -0.9881846         24        LAYING
-10296:                            -0.9884832         24        LAYING
-10297:                            -0.9920103         24        LAYING
-10298:                            -0.9921368         24        LAYING
-10299:                            -0.9902872         24        LAYING
+  by.subject by.activity Mean-(timeBodyAccMagnitudeMean) Mean-(timeBodyAccMagnitudeStdDeviation)
+1          1           1                      -0.1369712                              -0.2196886
+2          2           1                      -0.2904076                              -0.4225442
+3          3           1                      -0.2546903                              -0.3284289
+4          4           1                      -0.3120506                              -0.5276791
+5          5           1                      -0.1583387                              -0.3771787
+6          6           1                      -0.1668407                              -0.2667342
+  Mean-(timeGravityAccMagnitudeMean) Mean-(timeGravityAccMagnitudeStdDeviation)
+1                         -0.1369712                                 -0.2196886
+2                         -0.2904076                                 -0.4225442
+3                         -0.2546903                                 -0.3284289
+4                         -0.3120506                                 -0.5276791
+5                         -0.1583387                                 -0.3771787
+6                         -0.1668407                                 -0.2667342
+  Mean-(timeBodyAccJerkMagnitudeMean) Mean-(timeBodyAccJerkMagnitudeStdDeviation)
+1                          -0.1414288                                 -0.07447175
+2                          -0.2814242                                 -0.16415099
+3                          -0.2800093                                 -0.13991636
+4                          -0.3667009                                 -0.31691896
+5                          -0.2883330                                 -0.28224228
+6                          -0.1951170                                 -0.07060296
+  Mean-(timeBodyGyroMagnitudeMean) Mean-(timeBodyGyroMagnitudeStdDeviation)
+1                       -0.1609796                               -0.1869784
+2                       -0.4465491                               -0.5530199
+3                       -0.4664118                               -0.5615107
+4                       -0.4977922                               -0.5531161
+5                       -0.3559331                               -0.4921768
+6                       -0.2812078                               -0.3656029
+  Mean-(timeBodyGyroJerkMagnitudeMean) Mean-(timeBodyGyroJerkMagnitudeStdDeviation)
+1                           -0.2987037                                   -0.3253249
+2                           -0.5479120                                   -0.5577982
+3                           -0.5661352                                   -0.5673716
+4                           -0.6813040                                   -0.7301464
+5                           -0.4445325                                   -0.4891997
+6                           -0.3212905                                   -0.3647083
+  Mean-(freqBodyAccMagnitudeMean) Mean-(freqBodyAccMagnitudeStdDeviation)
+1                      -0.1286235                              -0.3980326
+2                      -0.3242894                              -0.5771052
+3                      -0.2900315                              -0.4563731
+4                      -0.4508046                              -0.6511726
+5                      -0.3049925                              -0.5196369
+6                      -0.2013866                              -0.4216831
+  Mean-(freqBodyAccJerkMagnitudeMean) Mean-(freqBodyAccJerkMagnitudeStdDeviation)
+1                         -0.05711940                                 -0.10349240
+2                         -0.16906435                                 -0.16409197
+3                         -0.18676452                                 -0.08985199
+4                         -0.31858781                                 -0.32045870
+5                         -0.26948166                                 -0.30568538
+6                         -0.05540142                                 -0.09649997
+  Mean-(freqBodyGyroMagnitudeMean) Mean-(freqBodyGyroMagnitudeStdDeviation)
+1                       -0.1992526                               -0.3210180
+2                       -0.5307048                               -0.6517928
+3                       -0.5697558                               -0.6326433
+4                       -0.6092856                               -0.5939372
+5                       -0.4842628                               -0.5897415
+6                       -0.3296811                               -0.5106483
+  Mean-(freqBodyGyroJerkMagnitudeMean) Mean-(freqBodyGyroJerkMagnitudeStdDeviation)
+1                           -0.3193086                                   -0.3816019
+2                           -0.5832493                                   -0.5581046
+3                           -0.6077516                                   -0.5490870
+4                           -0.7243274                                   -0.7577681
+5                           -0.5480536                                   -0.4556653
+6                           -0.3665005                                   -0.4080789
 ```
