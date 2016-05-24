@@ -3,17 +3,17 @@
 ## Student:  Narciso Albarracin
 
 ### Overview
-This project is the intended to synthesize and validate skills acquired during this course including collecting, working with and cleaning data sets.  Specifically, we will be manipulating a data set related to human activity tracking from smart phone sensors and finally creating *tidy* data sets.  
+This project synthesizes and validates skills acquired during this course including collecting, working with and cleaning data sets.  Specifically, we will be manipulating a data set related to human activity tracking from smart phone sensors and finally creating *tidy* data sets.  
 
 Coursera has made this data available at:  [https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip] with background and original research context at:  [http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones].
 
 Analysis and processing this human activity tracking data set requires application of both course instructors' teaching (Leek, Peng, Caffo) and interpretation of Hadley Wickham's *tidy data* principles as described in:  [https://www.jstatsoft.org/article/view/v059i10]
 
-Tidy datasets are easy to manipulate, model and visualize... have a specific structure: each variable is a column, each observation is a row, and each type of observational unit is a table).
+> Tidy datasets are easy to manipulate, model and visualize... have a specific structure: each variable is a column, each observation is a row, and each type of observational unit is a table).
 
 I attempt to apply these principles with R programming but also in applying proper semantic by documenting my approach via a code book that accompanies a data analysis script.
 
-Additionally, where possible I apply as much of Wickhams's convenience packags such as data.table, dplyr and attempt to use a more functional coding style by using R collections and declarative lapply, etc. processing where possible.
+Additionally, where possible I apply as much of Wickhams's convenience packags such as data.table, dplyr and attempt to use a more *functional style* coding by using R collections and declarative lapply, etc. processing where possible.
 
 ### Objectives
 
@@ -70,7 +70,7 @@ This project was designed and tested on the following specific environment:
 - OS: Windows 10
 
 ##### Data
-This project assumes you have input files downloaded from [...] and placed in the current directory of where you have cloned the Git repository.  
+This project assumes you have input files downloaded from [https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip] and placed in the current directory of where you have cloned the Git repository.  
 
 #### Project Criteria
 
@@ -82,7 +82,7 @@ This project assumes you have input files downloaded from [...] and placed in th
 
 #### How to evaluate this project
 
-- Check assumptions (i.e. dataset available locally)
+- Check assumptions (i.e. dataset available locally and retrieved from [https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip])
 - Open RStudio or commandline prompt with Rscript in environmet PATH
 - Read READM.html and CodeBook.html documentation
 - Run analyis run_analysis.R

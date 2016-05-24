@@ -172,7 +172,7 @@ dt4 <- dt3
 dt4.names <- names(dt4)
 dt4.names <- lapply(dt4.names, function(x) {
   x <- gsub("\\()","", x)
-  x <- gsub("-std$","StdDevation", x)
+  x <- gsub("-std$","StdDeviation", x)
   x <- gsub("-mean","Mean", x)
   x <- gsub("^(t)","time", x)
   x <- gsub("^(f)","freq", x)
@@ -208,6 +208,19 @@ dt5 <- aggregate(dt5, by = dt5.groupby, mean)
 
 ### 5d
 dt5 <- select(dt5, -one_of(c("activity.id", "subject.id")))
+dt5.names.old <- names(dt5)
+dt5.names.new <- lapply(dt5.names.old, function(x) {
+  is.groupby.name <- 
+    grepl(x, "by.subject") | 
+    grepl(x, "by.activity")
+  if (! is.groupby.name) {
+    x <- paste("Mean-(", x, ")", sep = "")    
+  } else {
+    x
+  }
+})
+dt5.names.new <- unlist(dt5.names.new)
+colnames(dt5) <- dt5.names.new
 
 ### 5e
 write.table(dt5, './tidy_out.txt', sep='\t')
